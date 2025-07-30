@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | CyberSec Vault</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 10px 20px;
+    }
+
+    header h1 {
+      color: cyan;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    .main-box {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .glow-box {
+      background-color: #111;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 15px cyan;
+      border-radius: 10px;
+      padding: 25px;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .glow-box h2 {
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .glow-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    .creator-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .person {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .person img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid cyan;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    .person h3 {
+      margin: 5px 0;
+      color: #00ffff;
+    }
+
+    .person p {
+      margin: 0;
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 5px 3px;
+      padding: 6px 10px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      font-size: 13px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: cyan;
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid #00ffff;
+      margin-top: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .creator-info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <h1><a href="/" style="color: cyan; text-decoration: none;">🔐 CyberSec Vault</a></h1>
+    <nav>
+      <a href="/password-checker">Password Checker</a>
+      <a href="/vault">Vault</a>
+      <a href="/phishing">Phishing Detector</a>
+      <a href="/spam-checker">Spam Checker</a>
+      <a href="/about">About</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+  <div class="main-box">
+    <div class="glow-box">
+      <h2>About CyberSec Vault</h2>
+      <p>This offline tool empowers users to:</p>
+      <ul>
+        <li>🔐 Create stronger passwords</li>
+        <li>🔐 Securely store credentials</li>
+        <li>🔐 Detect phishing links</li>
+        <li>🔐 Identify spam messages</li>
+      </ul>
+
+      <div class="creator-info">
+        <div class="person">
+          <img src="{{ url_for('static', filename='images/navneet.jpg') }}" alt="Navneet Kumar Pathak">
+          <h3>Navneet Kumar Pathak</h3>
+          <p>Final Year – Computer Science</p>
+          <div class="socials">
+            <a href="https://github.com/nowayhacker">GitHub</a>
+            <a href="https://www.linkedin.com/in/navneetpathak76">LinkedIn</a>
+            <a href="mailto:navneetpathak76@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <div class="person">
+          <img src="{{ url_for('static', filename='images/rajanya.jpg') }}" alt="Rajanya Thakur">
+          <h3>Rajanya Thakur</h3>
+          <p>Final Year – Computer Science</p>
+          <div class="socials">
+            <a href="#">GitHub</a>
+            <a href="https://www.linkedin.com/in/rajanya-thakur-298253267">LinkedIn</a>
+            <a href="mailto:riyat6599@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    🔒 CyberSec Vault – Final Year Project
+  </footer>
+
+</body>
+</html>

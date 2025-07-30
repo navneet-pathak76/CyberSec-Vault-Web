@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Login | CyberSec Vault{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height:80vh;">
+  <div class="neon-card p-4 col-md-6 text-center">
+    <h2 class="text-cyan mb-3">🔐 Secure Login</h2>
+    <form method="POST" action="/login">
+      <div class="mb-3 text-start">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" value="admin" required>
+      </div>
+      <div class="mb-3 text-start">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" value="password" required>
+      </div>
+      <button type="submit" class="btn btn-neon w-100">Enter Vault</button>
+    </form>
+    <small class="text-muted mt-3 d-block">* Demo only — no real auth</small>
+  </div>
+</div>
+{% endblock %}
